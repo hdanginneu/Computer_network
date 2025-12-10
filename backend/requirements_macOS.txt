@@ -6,4 +6,5 @@ soundfile
 numpy
 tqdm
 pydub
-ffmpeg-python
+# Install ffmpeg using Homebrew:
+# brew install ffmpeg
