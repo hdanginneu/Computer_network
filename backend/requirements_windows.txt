@@ -1,0 +1,15 @@
+torch
+torchaudio
+transformers
+librosa==0.9.2
+soundfile
+numpy
+tqdm
+pydub
+ffmpeg-python
+
+# Install ffmpeg manually:
+# https://ffmpeg.org/download.html
+
+# For CUDA GPU (optional):
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
