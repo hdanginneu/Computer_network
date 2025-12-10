@@ -142,4 +142,32 @@ Repeat for 1–2 questions.
 
 Open uploads/<folder>/ to show Q*.webm and meta.json.
 
+10) API Reference
+POST /api/verify-token
+Validate the input token.
+POST /api/session/start
+Start a new interview session and create a storage folder.
+POST /api/upload-one
+Upload a single answer video (Q1–Q5).
+Multipart fields:
+
+token
+folder
+questionIndex
+video (.webm)
+
+POST /api/session/finish
+Mark the interview as completed.
+POST /api/ai/process
+Run Whisper + GPT analysis on all uploaded videos.
+
+Storage Format
+Example session folder:
+
+storage/10_12_2025_21_30_Nam/
+├─ Q1.webm
+├─ Q2.webm
+├─ meta.json
+└─ analysis.json
+
 Finish.
