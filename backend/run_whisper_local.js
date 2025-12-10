@@ -6,6 +6,8 @@ export function runWhisperLocal(wavPath) {
     const script = path.join(process.cwd(), "whisper_local.py");
 
     const py = spawn("py", ["-3.10", script, wavPath]);
+    // const py = spawn("python3", [script, wavPath]); -> use this code if your computer is macos
+
 
     let output = "";
     let errOutput = "";
