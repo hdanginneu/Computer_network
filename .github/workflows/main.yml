@@ -1,11 +1,3 @@
-# đi vào thư mục repo (nếu cần)
-cd "D:\HK1 NĂM 2\CÔNG NGHỆ MẠNG VÀ TRUYỀN THÔNG\PROJECT\Computer_network-3"
-
-# (Tùy nếu chưa có) tạo folder workflows
-mkdir -Force .github\workflows
-
-# Tạo file ci.yml bằng here-string (dùng '@' để PowerShell không expand biến)
-$yaml = @'
 name: Test Workflow
 
 on:
@@ -16,15 +8,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Show uname (example)
+      - name: Show uname
         run: echo "Workflow is running on $(uname -a)"
 
       - name: List backend files
         run: ls -la backend || true
-'@
-
-$yaml | Out-File -FilePath .github\workflows\ci.yml -Encoding utf8
