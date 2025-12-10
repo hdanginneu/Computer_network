@@ -1,0 +1,13 @@
+# backend artifacts
+backend/storage/
+backend/.env
+
+# frontend build
+frontend/dist/
+frontend/.env
+
+# node
+**/node_modules/
+
+# macOS
+.DS_Store
