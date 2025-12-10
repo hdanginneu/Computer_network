@@ -1,0 +1,9 @@
+torch
+torchaudio
+transformers
+librosa
+soundfile
+numpy
+tqdm
+pydub
+ffmpeg-python
